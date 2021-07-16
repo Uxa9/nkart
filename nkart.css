@@ -125,3 +125,16 @@ section {
       left: 250px;
       transform: rotate(180deg) translate(50%, 0%);
       z-index: -2; }
+
+.prize-screen {
+  background: #FFC20E; }
+  .prize-screen h2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+    .prize-screen h2 span {
+      color: white; }
+      .prize-screen h2 span:first-child {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase; }
