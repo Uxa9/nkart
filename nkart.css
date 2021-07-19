@@ -24,7 +24,8 @@ body {
 .wrapper {
   width: 100%;
   height: calc(100vh - 50px);
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .button {
   color: black;
@@ -151,3 +152,257 @@ section {
         font-size: 1.2em;
         font-weight: bold;
         text-transform: uppercase; }
+  .prize-screen .prize-screen__nominations {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0px 15%; }
+    .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination {
+      position: relative; }
+      .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination h3 {
+        position: relative;
+        z-index: 1; }
+        .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination h3 p {
+          font-weight: 900;
+          text-transform: uppercase;
+          text-align: center; }
+          .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination h3 p:last-child {
+            font-size: 2em;
+            line-height: 40px; }
+      .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination div {
+        position: absolute;
+        background: white;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: right;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, 0); }
+        .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination div p {
+          position: absolute;
+          top: 25%;
+          text-align: right; }
+          .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination div p span {
+            font-weight: 900;
+            color: #ff0606; }
+            .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination div p span:first-child {
+              font-size: 3.9em;
+              line-height: 40px; }
+            .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination div p span:last-child {
+              font-size: 1.5em;
+              text-transform: uppercase;
+              padding-right: 15px; }
+      .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .round {
+        width: 200px;
+        height: 200px;
+        z-index: 0; }
+      .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure {
+        width: 290px;
+        height: 220px;
+        background: none;
+        top: 75px; }
+        .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p {
+          width: 210px;
+          top: 10%; }
+          .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p span:first-child {
+            padding-right: 15px; }
+      .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .triangle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        border-left: 130px solid transparent;
+        border-right: 160px solid transparent;
+        border-bottom: 220px solid #ff0606;
+        transform: rotate(180deg);
+        border-bottom-color: white; }
+      .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .square {
+        position: absolute;
+        top: 0;
+        left: 12%;
+        width: 200px;
+        height: 180px;
+        transform: rotate(20deg); }
+  .prize-screen .sharpers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+    .prize-screen .sharpers .top-sharps {
+      position: absolute;
+      top: -20px;
+      left: -407px;
+      display: flex;
+      animation: move-left 5s linear infinite; }
+
+@keyframes move-left {
+  0% {
+    transform: none; }
+  100% {
+    transform: translateX(357px); } }
+    .prize-screen .sharpers .bottom-sharps {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      display: flex;
+      animation: move-left-bottom 5s linear infinite; }
+
+@keyframes move-left-bottom {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(180deg) translateX(-357px); } }
+    .prize-screen .sharpers .sharp {
+      border-bottom-color: #FFC20E !important; }
+      .prize-screen .sharpers .sharp:nth-child(1) {
+        border-left: 25px solid transparent;
+        border-right: 27px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(2) {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(3) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(4) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(5) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(6) {
+        border-left: 30px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(7) {
+        border-left: 25px solid transparent;
+        border-right: 27px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(8) {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(9) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(10) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(11) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(12) {
+        border-left: 30px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(13) {
+        border-left: 25px solid transparent;
+        border-right: 27px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(14) {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(15) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(16) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(17) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(18) {
+        border-left: 30px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(19) {
+        border-left: 25px solid transparent;
+        border-right: 27px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(20) {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(21) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(22) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(23) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(24) {
+        border-left: 30px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(25) {
+        border-left: 25px solid transparent;
+        border-right: 27px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(26) {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(27) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(28) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(29) {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
+      .prize-screen .sharpers .sharp:nth-child(30) {
+        border-left: 30px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 20px solid #ff0606;
+        transform: rotate(0); }
