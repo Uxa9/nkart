@@ -245,7 +245,7 @@ section {
     .prize-screen .sharpers .bottom-sharps {
       position: absolute;
       bottom: -20px;
-      left: 0;
+      left: -407px;
       display: flex;
       animation: move-left-bottom 5s linear infinite; }
 
