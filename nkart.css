@@ -55,7 +55,9 @@ nav {
   height: 50px;
   max-width: 100vw;
   background: #FFC20E;
-  padding: 0 10%; }
+  padding: 0 10%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 999; }
   nav a {
     text-decoration: none;
     color: black;
@@ -67,14 +69,15 @@ nav {
 
 section {
   position: relative;
-  height: 100%;
-  min-height: 500px; }
+  height: calc(100% - 200px);
+  min-height: 260px;
+  padding: 100px 10%; }
 
 .land-screen {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 10%; }
+  margin-bottom: 50px; }
   .land-screen .land-screen__content {
     display: flex;
     flex-flow: column nowrap;
@@ -129,11 +132,14 @@ section {
       z-index: -2; }
 
 .prize-screen {
+  height: 550px;
+  padding: 0;
   background: #FFC20E; }
   .prize-screen h2 {
     display: flex;
     justify-content: center;
-    align-items: flex-end; }
+    align-items: flex-end;
+    padding-top: 40px; }
     .prize-screen h2 span {
       color: white;
       font-family: "Open Sans", sans-serif; }
@@ -156,7 +162,7 @@ section {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    padding: 0px 15%; }
+    padding: 0px 10%; }
     .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination {
       position: relative; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination h3 {
@@ -233,7 +239,7 @@ section {
     .prize-screen .sharpers .top-sharps {
       position: absolute;
       top: -20px;
-      left: -407px;
+      left: -600px;
       display: flex;
       animation: move-left 5s linear infinite; }
 
@@ -241,11 +247,11 @@ section {
   0% {
     transform: none; }
   100% {
-    transform: translateX(357px); } }
+    transform: translateX(-697px); } }
     .prize-screen .sharpers .bottom-sharps {
       position: absolute;
       bottom: -20px;
-      left: -407px;
+      left: -600px;
       display: flex;
       animation: move-left-bottom 5s linear infinite; }
 
@@ -253,156 +259,115 @@ section {
   0% {
     transform: rotate(180deg); }
   100% {
-    transform: rotate(180deg) translateX(-357px); } }
+    transform: rotate(180deg) translateX(695px); } }
     .prize-screen .sharpers .sharp {
       border-bottom-color: #FFC20E !important; }
-      .prize-screen .sharpers .sharp:nth-child(1) {
+      .prize-screen .sharpers .sharp:nth-child(n) {
         border-left: 25px solid transparent;
         border-right: 27px solid transparent;
         border-bottom: 20px solid #ff0606;
         transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(2) {
+      .prize-screen .sharpers .sharp:nth-child(2n+2) {
         border-left: 35px solid transparent;
         border-right: 35px solid transparent;
         border-bottom: 20px solid #ff0606;
         transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(3) {
+      .prize-screen .sharpers .sharp:nth-child(3n+3) {
         border-left: 30px solid transparent;
         border-right: 30px solid transparent;
         border-bottom: 20px solid #ff0606;
         transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(4) {
+      .prize-screen .sharpers .sharp:nth-child(4n+4) {
         border-left: 30px solid transparent;
         border-right: 30px solid transparent;
         border-bottom: 20px solid #ff0606;
         transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(5) {
+      .prize-screen .sharpers .sharp:nth-child(5n+5) {
         border-left: 30px solid transparent;
         border-right: 30px solid transparent;
         border-bottom: 20px solid #ff0606;
         transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(6) {
+      .prize-screen .sharpers .sharp:nth-child(6n+6) {
         border-left: 30px solid transparent;
         border-right: 25px solid transparent;
         border-bottom: 20px solid #ff0606;
         transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(7) {
-        border-left: 25px solid transparent;
-        border-right: 27px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(8) {
-        border-left: 35px solid transparent;
-        border-right: 35px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(9) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(10) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(11) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(12) {
-        border-left: 30px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(13) {
-        border-left: 25px solid transparent;
-        border-right: 27px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(14) {
-        border-left: 35px solid transparent;
-        border-right: 35px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(15) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(16) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(17) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(18) {
-        border-left: 30px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(19) {
-        border-left: 25px solid transparent;
-        border-right: 27px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(20) {
-        border-left: 35px solid transparent;
-        border-right: 35px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(21) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(22) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(23) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(24) {
-        border-left: 30px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(25) {
-        border-left: 25px solid transparent;
-        border-right: 27px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(26) {
-        border-left: 35px solid transparent;
-        border-right: 35px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(27) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(28) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(29) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(30) {
-        border-left: 30px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
+
+.stages-screen h2 {
+  font-size: 2em;
+  font-weight: 600; }
+
+.stages-screen .stages-screen__timeline .stages-screen__timeline__dates {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between; }
+  .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    color: #CCCCCC; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(1) {
+      padding-right: 2px; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(2) {
+      padding-right: 10px; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(3) {
+      padding-left: 18px; }
+
+.stages-screen .stages-screen__timeline .stages-screen__timeline__stage {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 130px; }
+  .stages-screen .stages-screen__timeline .stages-screen__timeline__stage span {
+    text-align: center;
+    font-weight: bold; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__stage span:nth-child(1) {
+      padding-left: 20px; }
+
+.stages-screen .stages-screen__timeline .stages-screen__timeline__shapes {
+  position: absolute;
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between; }
+  .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square {
+    width: 40px;
+    height: 150px; }
+  .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round:before {
+      display: block;
+      content: "";
+      height: 200px;
+      width: 2px;
+      background: #CCCCCC;
+      position: absolute;
+      top: -72px;
+      left: 50%;
+      transform: translate(100% 0);
+      z-index: -1; }
+  .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes:before {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    left: 0;
+    width: 99%;
+    height: 0px;
+    border-bottom: dashed 6px black; }
+
+.stages-screen .stages-screen__figures {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 10%; }
+  .stages-screen .stages-screen__figures .triangle {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid #ff0606;
+    transform: rotate(0); }
+    .stages-screen .stages-screen__figures .triangle:first-child {
+      margin-right: 60px; }
