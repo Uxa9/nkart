@@ -163,6 +163,12 @@ section {
     justify-content: space-between;
     margin-top: 30px;
     padding: 0px 10%; }
+    .prize-screen .prize-screen__nominations a {
+      text-decoration: none;
+      color: black; }
+      .prize-screen .prize-screen__nominations a:hover {
+        transition: all .5s;
+        transform: scale(1.1); }
     .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination {
       position: relative; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination h3 {
@@ -235,7 +241,8 @@ section {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    z-index: -1; }
     .prize-screen .sharpers .top-sharps {
       position: absolute;
       top: -20px;
@@ -370,4 +377,153 @@ section {
     border-bottom: 70px solid #ff0606;
     transform: rotate(0); }
     .stages-screen .stages-screen__figures .triangle:first-child {
-      margin-right: 60px; }
+      margin-right: 8vw; }
+
+.nomination-screen h2 {
+  font-size: 3em; }
+  .nomination-screen h2 span {
+    text-transform: uppercase; }
+
+.nomination-screen p {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  width: 60%;
+  font-size: 1.2em;
+  font-weight: 600; }
+
+.nomination-screen:nth-child(even) {
+  background: #FFF9E6; }
+
+.floor-nomination {
+  overflow-y: hidden; }
+  .floor-nomination .section-animation .section-animation__top, .floor-nomination .section-animation .section-animation__bottom {
+    display: flex;
+    position: absolute;
+    right: 10%;
+    z-index: 999; }
+    .floor-nomination .section-animation .section-animation__top .triangle, .floor-nomination .section-animation .section-animation__bottom .triangle {
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 70px solid #ff0606;
+      transform: rotate(0); }
+      .floor-nomination .section-animation .section-animation__top .triangle:first-child, .floor-nomination .section-animation .section-animation__bottom .triangle:first-child {
+        margin-right: 8vw; }
+  .floor-nomination .section-animation .section-animation__top {
+    top: 0;
+    transform: rotate(180deg); }
+  .floor-nomination .section-animation .section-animation__bottom {
+    bottom: 0; }
+  .floor-nomination .section-animation .section-animation__content {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 10%; }
+    .floor-nomination .section-animation .section-animation__content > div {
+      display: flex;
+      flex-flow: column nowrap; }
+      .floor-nomination .section-animation .section-animation__content > div .square {
+        width: 80px;
+        height: 80px;
+        margin: 15px 0; }
+      .floor-nomination .section-animation .section-animation__content > div:first-child {
+        margin-right: 8vw; }
+    .floor-nomination .section-animation .section-animation__content .section-animation__content__top-direction {
+      animation: move-top 1s linear infinite; }
+
+@keyframes move-top {
+  0% {
+    transform: translateY(-110px); }
+  100% {
+    transform: translateY(0); } }
+    .floor-nomination .section-animation .section-animation__content .section-animation__content__bottom-direction {
+      animation: move-bottom 1s linear infinite; }
+
+@keyframes move-bottom {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-110px); } }
+
+.foodcourt-nomination {
+  display: flex;
+  justify-content: flex-end; }
+  .foodcourt-nomination .nomination-screen__text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    z-index: 99;
+    text-align: right; }
+  .foodcourt-nomination .section-animation {
+    overflow-y: visible; }
+    .foodcourt-nomination .section-animation .section-animation__top {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 10%;
+      z-index: 999; }
+      .foodcourt-nomination .section-animation .section-animation__top .triangle {
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 70px solid #ff0606;
+        transform: rotate(180deg); }
+        .foodcourt-nomination .section-animation .section-animation__top .triangle:first-child {
+          margin-right: 8vw; }
+    .foodcourt-nomination .section-animation .section-animation__content .pizza {
+      position: absolute;
+      left: 0;
+      top: 10vh;
+      z-index: 1;
+      border-left: 280px solid transparent;
+      border-right: 140px solid transparent;
+      border-bottom: 600px solid #ff0606;
+      transform: rotate(193deg);
+      border-bottom-color: #FFC20E; }
+      .foodcourt-nomination .section-animation .section-animation__content .pizza .square {
+        background: #009444;
+        position: absolute; }
+        .foodcourt-nomination .section-animation .section-animation__content .pizza .square:first-child {
+          top: 450px;
+          left: -30px;
+          width: 120px;
+          height: 100px;
+          transform: rotate(-30deg); }
+        .foodcourt-nomination .section-animation .section-animation__content .pizza .square:nth-child(5) {
+          top: 230px;
+          left: -60px;
+          width: 90px;
+          height: 90px; }
+      .foodcourt-nomination .section-animation .section-animation__content .pizza .round {
+        background: #ff0606;
+        position: absolute; }
+        .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(2) {
+          top: 450px;
+          left: -130px;
+          height: 110px;
+          width: 110px; }
+        .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(3) {
+          top: 310px;
+          left: -45px;
+          height: 130px;
+          width: 130px;
+          z-index: 3; }
+        .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(4) {
+          top: 380px;
+          left: -130px;
+          height: 40px;
+          width: 40px; }
+        .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(6) {
+          top: 155px;
+          left: -45px;
+          height: 80px;
+          width: 80px; }
+
+.street-nomination .nomination-screen__text {
+  z-index: 999; }
+
+.street-nomination .section-animation .section-animation__content .sun {
+  position: absolute;
+  top: 60px;
+  right: 15%;
+  background: #FFC20E;
+  width: 30px;
+  height: 30px; }
