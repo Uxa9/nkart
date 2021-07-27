@@ -557,7 +557,8 @@ section {
           left: -130px;
           height: 110px;
           width: 110px;
-          animation: pizza-popup-first 4s linear infinite; }
+          animation: pizza-popup-first 2s linear infinite;
+          animation-delay: 0s; }
 
 @keyframes pizza-popup-first {
   0% {
@@ -572,14 +573,13 @@ section {
           height: 130px;
           width: 130px;
           z-index: 3;
-          animation: pizza-popup-second 4s linear infinite; }
+          animation: pizza-popup-second 2s linear infinite;
+          animation-delay: .5s; }
 
 @keyframes pizza-popup-second {
   0% {
     transform: scale(1); }
-  20% {
-    transform: scale(1); }
-  60% {
+  50% {
     transform: scale(1.1); }
   100% {
     transform: scale(1); } }
@@ -588,14 +588,13 @@ section {
           left: -130px;
           height: 40px;
           width: 40px;
-          animation: pizza-popup-third 4s linear infinite; }
+          animation: pizza-popup-third 2s linear infinite;
+          animation-delay: 1s; }
 
 @keyframes pizza-popup-third {
   0% {
     transform: scale(1); }
-  60% {
-    transform: scale(1); }
-  80% {
+  50% {
     transform: scale(1.3); }
   100% {
     transform: scale(1); } }
@@ -604,14 +603,13 @@ section {
           left: -45px;
           height: 80px;
           width: 80px;
-          animation: pizza-popup-forth 4s linear infinite; }
+          animation: pizza-popup-forth 2s linear infinite;
+          animation-delay: 1.5s; }
 
 @keyframes pizza-popup-forth {
   0% {
     transform: scale(1); }
-  40% {
-    transform: scale(1); }
-  70% {
+  50% {
     transform: scale(1.05); }
   100% {
     transform: scale(1); } }
@@ -666,7 +664,7 @@ section {
         width: 40px;
         height: 40px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: .5s; }
+        animation-delay: .2s; }
 
 @keyframes alley-popup {
   0% {
@@ -681,7 +679,7 @@ section {
         width: 50px;
         height: 50px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 1s; }
+        animation-delay: .3s; }
 
 @keyframes alley-popup {
   0% {
@@ -696,7 +694,7 @@ section {
         width: 55px;
         height: 55px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 1.5s; }
+        animation-delay: .5s; }
 
 @keyframes alley-popup {
   0% {
@@ -711,7 +709,7 @@ section {
         width: 60px;
         height: 60px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 2s; }
+        animation-delay: .7s; }
 
 @keyframes alley-popup {
   0% {
@@ -726,7 +724,7 @@ section {
         width: 70px;
         height: 70px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 2.5s; }
+        animation-delay: .9s; }
 
 @keyframes alley-popup {
   0% {
@@ -741,7 +739,7 @@ section {
         width: 60px;
         height: 60px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 3s; }
+        animation-delay: .11s; }
 
 @keyframes alley-popup {
   0% {
@@ -756,7 +754,7 @@ section {
         width: 80px;
         height: 70px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 3.5s; }
+        animation-delay: .13s; }
 
 @keyframes alley-popup {
   0% {
@@ -771,7 +769,7 @@ section {
         width: 95px;
         height: 95px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: 4s; }
+        animation-delay: .17s; }
 
 @keyframes alley-popup {
   0% {
