@@ -91,7 +91,16 @@ section {
   .land-screen .land-screen__content {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around; }
+    justify-content: space-around;
+    animation: landpage-popup 1s linear; }
+
+@keyframes landpage-popup {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
     .land-screen .land-screen__content .land-screen__text {
       max-width: 60vw; }
       .land-screen .land-screen__content .land-screen__text h1 p:first-child {
@@ -123,23 +132,42 @@ section {
       position: absolute;
       top: 10%;
       left: 250px;
-      transform: rotate(180deg) translate(50%, 0%);
+      animation: landScreen-triangle 1s linear forwards;
       z-index: -1; }
+
+@keyframes landScreen-triangle {
+  0% {
+    transform: rotate(180deg) translate(50%, 50%); }
+  100% {
+    transform: rotate(180deg) translate(50%, 0%); } }
     .land-screen .land-screen__figures .square {
       height: 200px;
       width: 200px;
       position: absolute;
       top: 50%;
       left: -50px;
+      animation: landScreen-square 1s linear forwards;
       z-index: -2; }
+
+@keyframes landScreen-square {
+  0% {
+    transform: translate(-30%, 0%); }
+  100% {
+    transform: translate(10%, 0%); } }
     .land-screen .land-screen__figures .round {
       height: 200px;
       width: 200px;
       position: absolute;
       top: 50%;
       left: 250px;
-      transform: rotate(180deg) translate(50%, 0%);
+      animation: landScreen-round 1s linear forwards;
       z-index: -2; }
+
+@keyframes landScreen-round {
+  0% {
+    transform: rotate(180deg) translate(50%, 0%) scale(1.1); }
+  100% {
+    transform: rotate(180deg) translate(50%, 0%) scale(1); } }
 
 .prize-screen {
   height: 550px;
@@ -497,12 +525,30 @@ section {
           left: -30px;
           width: 120px;
           height: 100px;
-          transform: rotate(-30deg); }
+          transform: rotate(-30deg);
+          animation: pizza-shaking-first 4s linear infinite; }
+
+@keyframes pizza-shaking-first {
+  0% {
+    transform: rotate(-30deg); }
+  50% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-30deg); } }
         .foodcourt-nomination .section-animation .section-animation__content .pizza .square:nth-child(5) {
           top: 230px;
           left: -60px;
           width: 90px;
-          height: 90px; }
+          height: 90px;
+          animation: pizza-shaking-second 4s linear infinite; }
+
+@keyframes pizza-shaking-second {
+  0% {
+    transform: rotate(15deg); }
+  50% {
+    transform: rotate(30deg); }
+  100% {
+    transform: rotate(15deg); } }
       .foodcourt-nomination .section-animation .section-animation__content .pizza .round {
         background: #ff0606;
         position: absolute; }
@@ -510,23 +556,65 @@ section {
           top: 450px;
           left: -130px;
           height: 110px;
-          width: 110px; }
+          width: 110px;
+          animation: pizza-popup-first 4s linear infinite; }
+
+@keyframes pizza-popup-first {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
         .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(3) {
           top: 310px;
           left: -45px;
           height: 130px;
           width: 130px;
-          z-index: 3; }
+          z-index: 3;
+          animation: pizza-popup-second 4s linear infinite; }
+
+@keyframes pizza-popup-second {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
         .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(4) {
           top: 380px;
           left: -130px;
           height: 40px;
-          width: 40px; }
+          width: 40px;
+          animation: pizza-popup-third 4s linear infinite; }
+
+@keyframes pizza-popup-third {
+  0% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1); }
+  80% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
         .foodcourt-nomination .section-animation .section-animation__content .pizza .round:nth-child(6) {
           top: 155px;
           left: -45px;
           height: 80px;
-          width: 80px; }
+          width: 80px;
+          animation: pizza-popup-forth 4s linear infinite; }
+
+@keyframes pizza-popup-forth {
+  0% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
 
 .street-nomination {
   z-index: 2; }
@@ -545,54 +633,153 @@ section {
       right: calc(10% + 200px);
       background: #FFC20E;
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      animation: alley-popup 3s linear infinite;
+      animation-delay: 3s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
     .street-nomination .section-animation .section-animation__content .alley .round {
       position: absolute; }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(1) {
         top: 100px;
         right: calc(10% + 80px);
         width: 35px;
-        height: 35px; }
+        height: 35px;
+        animation: alley-popup 1s linear infinite; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(2) {
         top: 140px;
         right: calc(10% + 115px);
         width: 40px;
-        height: 40px; }
+        height: 40px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: .5s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(3) {
         top: 190px;
         right: calc(10% + 150px);
         width: 50px;
-        height: 50px; }
+        height: 50px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 1s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(4) {
         top: 250px;
         right: calc(10% + 200px);
         width: 55px;
-        height: 55px; }
+        height: 55px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 1.5s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(5) {
         top: 300px;
         right: calc(10% + 245px);
         width: 60px;
-        height: 60px; }
+        height: 60px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 2s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(6) {
         top: 350px;
         right: calc(10% + 300px);
         width: 70px;
-        height: 70px; }
+        height: 70px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 2.5s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(10) {
         top: 270px;
         right: 10%;
         width: 60px;
-        height: 60px; }
+        height: 60px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 3s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(11) {
         top: 335px;
         right: calc(10% + 10px);
         width: 80px;
-        height: 70px; }
+        height: 70px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 3.5s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(12) {
         top: 400px;
         right: calc(10% + 50px);
         width: 95px;
-        height: 95px; }
+        height: 95px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: 4s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
     .street-nomination .section-animation .section-animation__content .alley .triangle {
       position: absolute; }
       .street-nomination .section-animation .section-animation__content .alley .triangle:nth-child(7) {
