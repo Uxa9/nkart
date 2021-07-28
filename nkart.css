@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("fonts/ProximaNova-Regular.woff") format("woff"), url("fonts/ProximaNova-Regular.woff2") format("woff2"); }
+
 .square {
   background: #FFC20E; }
 
@@ -14,7 +16,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Nunito, sans-serif;
+  font-family: "ProximaNova-Regular", sans-serif;
   font-style: normal;
   font-weight: normal; }
 
@@ -26,6 +28,10 @@ body {
   height: calc(100vh - 50px);
   overflow-y: scroll;
   overflow-x: hidden; }
+
+.buttons {
+  display: flex;
+  flex-flow: row nowrap; }
 
 .button {
   color: black;
@@ -42,11 +48,38 @@ body {
     height: 50px;
     font-size: 1em;
     border: solid 2px black;
-    background: none; }
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .button button .arrow {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 10px; }
+      .button button .arrow:before, .button button .arrow:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 2px;
+        background: black; }
+      .button button .arrow:before {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 250%) rotate(45deg); }
+      .button button .arrow:after {
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -250%) rotate(-45deg); }
     .button button:hover {
       background: black;
       border-color: black;
-      color: white; }
+      color: white;
+      transition: all 1s; }
+      .button button:hover .arrow:before, .button button:hover .arrow:after {
+        filter: invert(100%);
+        -webkit-filter: invert(100%); }
 
 .button-highlight {
   margin-right: 15px; }
@@ -54,6 +87,9 @@ body {
     background: #FF003D;
     color: white;
     border-color: #FF003D; }
+    .button-highlight button .arrow:before, .button-highlight button .arrow:after {
+      filter: invert(100%);
+      -webkit-filter: invert(100%); }
 
 nav {
   display: flex;
@@ -74,6 +110,9 @@ nav {
     font-weight: bold; }
     nav a img {
       height: 25px; }
+  nav > a:first-child {
+    display: flex;
+    align-items: center; }
   nav .navigation__links a {
     padding: 0px 7px; }
 
@@ -86,9 +125,12 @@ section {
 .land-screen {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 50px;
   height: calc(100% - 200px); }
+  .land-screen .land-screen-wrapper {
+    position: relative;
+    max-width: 1200px; }
   .land-screen .land-screen__content {
     display: flex;
     flex-flow: column nowrap;
@@ -103,7 +145,8 @@ section {
     transform: translateX(0);
     opacity: 1; } }
     .land-screen .land-screen__content .land-screen__text {
-      max-width: 60vw; }
+      max-width: 800px;
+      padding-right: 400px; }
       .land-screen .land-screen__content .land-screen__text h1 p:first-child {
         font-weight: 900;
         font-size: 2em; }
@@ -122,7 +165,8 @@ section {
       flex-flow: row nowrap; }
   .land-screen .land-screen__figures {
     position: absolute;
-    right: 10%;
+    top: 0;
+    right: 0%;
     height: 400px;
     width: 400px; }
     .land-screen .land-screen__figures .triangle {
@@ -171,14 +215,14 @@ section {
     transform: rotate(180deg) translate(50%, 0%) scale(1); } }
 
 .prize-screen {
-  height: 550px;
+  height: 650px;
   padding: 0;
   background: #FFC20E; }
   .prize-screen h2 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-top: 40px; }
+    padding-top: 80px; }
     .prize-screen h2 span {
       color: white;
       font-family: "Open Sans", sans-serif; }
@@ -200,7 +244,7 @@ section {
   .prize-screen .prize-screen__nominations {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 60px;
     padding: 0px 10%; }
     .prize-screen .prize-screen__nominations a {
       text-decoration: none;
@@ -242,11 +286,10 @@ section {
               line-height: 40px; }
             .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination div p span:last-child {
               font-size: 1.5em;
-              text-transform: uppercase;
-              padding-right: 15px; }
+              text-transform: uppercase; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .round {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
         z-index: 0; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure {
         width: 290px;
@@ -256,17 +299,17 @@ section {
         .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p {
           width: 210px;
           top: 10%; }
-          .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p span:first-child {
-            padding-right: 15px; }
+          .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p span:last-child {
+            padding-right: 5px; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .triangle {
         position: absolute;
         top: 0;
         left: 0;
         background: transparent;
         border-left: 130px solid transparent;
-        border-right: 160px solid transparent;
-        border-bottom: 220px solid #ff0606;
-        transform: rotate(180deg);
+        border-right: 150px solid transparent;
+        border-bottom: 200px solid #ff0606;
+        transform: rotate(185deg);
         border-bottom-color: white; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .square {
         position: absolute;
@@ -285,7 +328,7 @@ section {
     .prize-screen .sharpers .top-sharps {
       position: absolute;
       top: -20px;
-      left: -600px;
+      left: -520px;
       display: flex;
       animation: move-left 5s linear infinite; }
 
@@ -293,56 +336,36 @@ section {
   0% {
     transform: none; }
   100% {
-    transform: translateX(-697px); } }
+    transform: translateX(-520px); } }
     .prize-screen .sharpers .bottom-sharps {
       position: absolute;
       bottom: -20px;
-      left: -600px;
+      left: -520px;
       display: flex;
-      animation: move-left-bottom 5s linear infinite; }
+      animation: move-right-bottom 5s linear infinite; }
 
 @keyframes move-left-bottom {
   0% {
     transform: rotate(180deg); }
   100% {
     transform: rotate(180deg) translateX(695px); } }
+
+@keyframes move-right-bottom {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(180deg) translateX(-520px); } }
     .prize-screen .sharpers .sharp {
-      border-bottom-color: #FFC20E !important; }
-      .prize-screen .sharpers .sharp:nth-child(n) {
-        border-left: 25px solid transparent;
-        border-right: 27px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(2n+2) {
-        border-left: 35px solid transparent;
-        border-right: 35px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(3n+3) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(4n+4) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(5n+5) {
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
-      .prize-screen .sharpers .sharp:nth-child(6n+6) {
-        border-left: 30px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 20px solid #ff0606;
-        transform: rotate(0); }
+      border-bottom-color: #FFC20E !important;
+      border-left: 25px solid transparent;
+      border-right: 27px solid transparent;
+      border-bottom: 20px solid #ff0606;
+      transform: rotate(0); }
 
 .stages-screen {
   height: 400px; }
   .stages-screen h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600; }
   .stages-screen .stages-screen__timeline .stages-screen__timeline__dates {
     margin-top: 40px;
@@ -416,20 +439,21 @@ section {
       .stages-screen .stages-screen__figures .triangle:first-child {
         margin-right: 8vw; }
 
-.nomination-screen h2 {
-  font-size: 3em; }
-  .nomination-screen h2 span {
-    text-transform: uppercase; }
-
-.nomination-screen p {
-  margin-top: 40px;
-  margin-bottom: 100px;
-  width: 60%;
-  font-size: 1.2em;
-  font-weight: 600; }
-
-.nomination-screen:nth-child(even) {
-  background: #FFF9E6; }
+.nomination-screen {
+  display: flex;
+  align-items: center; }
+  .nomination-screen h2 {
+    font-size: 3em; }
+    .nomination-screen h2 span {
+      text-transform: uppercase; }
+  .nomination-screen p {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 60%;
+    font-size: 1.2em;
+    font-weight: 600; }
+  .nomination-screen:nth-child(even) {
+    background: #FFF9E6; }
 
 .floor-nomination {
   overflow-y: hidden; }
@@ -735,12 +759,12 @@ section {
   100% {
     transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(10) {
-        top: 270px;
-        right: 10%;
-        width: 60px;
-        height: 60px;
+        top: 160px;
+        right: calc(10% - 45px);
+        width: 40px;
+        height: 40px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: .11s; }
+        animation-delay: .15s; }
 
 @keyframes alley-popup {
   0% {
@@ -750,12 +774,12 @@ section {
   100% {
     transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(11) {
-        top: 335px;
-        right: calc(10% + 10px);
-        width: 80px;
-        height: 70px;
+        top: 210px;
+        right: calc(10% - 30px);
+        width: 50px;
+        height: 50px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: .13s; }
+        animation-delay: .16s; }
 
 @keyframes alley-popup {
   0% {
@@ -765,12 +789,42 @@ section {
   100% {
     transform: scale(1); } }
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(12) {
+        top: 270px;
+        right: calc(10% - 10px);
+        width: 60px;
+        height: 60px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: .17s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+      .street-nomination .section-animation .section-animation__content .alley .round:nth-child(13) {
+        top: 335px;
+        right: calc(10% + 10px);
+        width: 80px;
+        height: 70px;
+        animation: alley-popup 1s linear infinite;
+        animation-delay: .18s; }
+
+@keyframes alley-popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+      .street-nomination .section-animation .section-animation__content .alley .round:nth-child(14) {
         top: 400px;
         right: calc(10% + 50px);
         width: 95px;
         height: 95px;
         animation: alley-popup 1s linear infinite;
-        animation-delay: .17s; }
+        animation-delay: .19s; }
 
 @keyframes alley-popup {
   0% {
@@ -806,18 +860,18 @@ section {
 .rules-screen {
   height: auto; }
   .rules-screen h2 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: 500; }
   .rules-screen .rules-screen__rules {
     margin-top: 50px;
     border: solid black;
-    border-width: 2px 0 2px 0;
-    margin-left: 60px; }
+    border-width: 2px 0 2px 0; }
     .rules-screen .rules-screen__rules .rules-screen__rules__rule {
       display: flex;
       flex-flow: column;
       padding: 20px 0px;
       position: relative;
+      cursor: pointer;
       transition: all .5s; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule:not(:last-child) {
         border-bottom: solid 2px black; }
@@ -825,6 +879,14 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-between; }
+        .rules-screen .rules-screen__rules .rules-screen__rules__rule .rules-screen__rules__rule__short .screen__rules__rule__short__label {
+          display: flex;
+          align-items: center; }
+          .rules-screen .rules-screen__rules .rules-screen__rules__rule .rules-screen__rules__rule__short .screen__rules__rule__short__label .square {
+            margin-right: 15px;
+            width: 25px;
+            height: 25px;
+            background: #ff0606; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule p {
         display: none;
         margin-top: 20px;
@@ -832,17 +894,10 @@ section {
         padding-left: 15px; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule h4 {
         font-weight: bold; }
-      .rules-screen .rules-screen__rules .rules-screen__rules__rule .square {
-        position: absolute;
-        left: -60px;
-        width: 25px;
-        height: 25px;
-        background: #ff0606; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule .expand-button {
         position: relative;
         width: 20px;
         height: 20px;
-        cursor: pointer;
         transition: transform .5s; }
         .rules-screen .rules-screen__rules .rules-screen__rules__rule .expand-button:before, .rules-screen .rules-screen__rules .rules-screen__rules__rule .expand-button:after {
           display: block;
@@ -872,9 +927,10 @@ footer {
   position: relative;
   background: #FFC20E;
   padding: 30px 10%;
-  color: white; }
+  color: black; }
   footer p:nth-child(4) {
-    font-weight: bold; }
+    font-weight: bolder;
+    font-size: 1.3em; }
   footer .links {
     display: flex; }
     footer .links a {

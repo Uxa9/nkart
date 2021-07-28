@@ -2,9 +2,18 @@ $yellow : #FFC20E;
 $red : #ff0606;
 $green : #009444;
 $trianglesGap : 8vw;
+$proximaReg : "ProximaNova-Regular";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+@font-face {
+    font-family: "ProximaNova-Regular";
+
+    src:
+        url("fonts/ProximaNova-Regular.woff") format("woff"),
+        url("fonts/ProximaNova-Regular.woff2") format("woff2");
+}
 
 @mixin drawTriangle($sizeLeft, $sizeRight, $sizeTop, $rotateDeg) {
     border-left: $sizeLeft solid transparent;
@@ -30,7 +39,7 @@ $trianglesGap : 8vw;
 * {
     margin: 0;
     padding: 0;
-    font-family: Nunito, sans-serif;
+    font-family: $proximaReg, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
@@ -42,6 +51,11 @@ body {
     height: calc(100vh - 50px);
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .button {
@@ -64,12 +78,58 @@ body {
 
         border: solid 2px black;
         background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            position: relative;
+
+            margin-right: 10px;
+
+            &:before, &:after {
+                display: block;
+                content: "";
+                position: absolute;
+
+                width: 12px;
+                height: 2px;
+
+                background: black;
+            }
+
+            &:before {
+                top: 0%;
+                left: 50%;
+
+                transform: translate(-50%, 250%) rotate(45deg);
+            }
+
+            &:after {
+                bottom: 0%;
+                left: 50%;
+
+                transform: translate(-50%, -250%) rotate(-45deg);
+            }
+        }
 
         &:hover {
             background: black;
             border-color: black;
             color: white;
+
+            transition: all 1s;
+
+            .arrow {
+                &:before, &:after {
+                    filter: invert(100%);
+                    -webkit-filter: invert(100%);
+                }
+            }
         }
+
     }
 }
 
@@ -80,6 +140,13 @@ body {
         background: #FF003D;
         color: white;
         border-color: #FF003D;
+
+        .arrow {
+            &:before, &:after {
+                filter: invert(100%);
+                -webkit-filter: invert(100%);
+            }
+        }
     }
 }
 
@@ -108,6 +175,11 @@ nav {
         }
     }
 
+    >a:first-child {
+        display: flex;
+        align-items: center;
+    }
+
     .navigation__links {
         a {
             padding: 0px 7px;
@@ -126,9 +198,14 @@ section {
 .land-screen {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 50px;
     height: calc(100% - 200px);
+
+    .land-screen-wrapper {
+        position: relative;
+        max-width: 1200px;
+    }
 
     .land-screen__content {
         display: flex;
@@ -143,8 +220,9 @@ section {
         }
 
         .land-screen__text {
-            max-width: 60vw;
-
+            // max-width: 60vw;
+            max-width: 800px;
+            padding-right: 400px;
             h1 {
                 p {
                     &:first-child {
@@ -182,7 +260,8 @@ section {
 
     .land-screen__figures {
         position: absolute;
-        right: 10%;
+        top: 0;
+        right: 0%;
         height: 400px;
         width: 400px;
 
@@ -248,14 +327,14 @@ section {
 }
 
 .prize-screen {
-    height: 550px;
+    height: 650px;
     padding: 0;
     background: $yellow;
     h2 {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        padding-top: 40px;
+        padding-top: 80px;
 
         span {
             color: white;
@@ -289,7 +368,7 @@ section {
         display: flex;
         justify-content: space-between;
 
-        margin-top: 30px;
+        margin-top: 60px;
 
         padding: 0px 10%;
 
@@ -351,15 +430,15 @@ section {
                         &:last-child {
                             font-size: 1.5em;
                             text-transform: uppercase;
-                            padding-right: 15px;
+                            // padding-right: 15px;
                         }
                     }
                 }
             }
 
             .round {
-                width: 200px;
-                height: 200px;
+                width: 240px;
+                height: 240px;
 
                 z-index: 0;
             }
@@ -375,7 +454,11 @@ section {
                     top: 10%;
 
                     span:first-child {
-                        padding-right: 15px;
+                        // padding-right: 15px;
+                    }
+
+                    span:last-child {
+                        padding-right: 5px;
                     }
                 }
             }
@@ -385,7 +468,7 @@ section {
                 top: 0;
                 left: 0;
                 background: transparent;
-                @include drawTriangle(130px, 160px, 220px, 180deg);
+                @include drawTriangle(130px, 150px, 200px, 185deg);
                 border-bottom-color: white;
             }
 
@@ -415,7 +498,7 @@ section {
             position: absolute;
 
             top: -20px;
-            left: -600px;
+            left: -520px;
 
             display: flex;
 
@@ -423,7 +506,7 @@ section {
 
             @keyframes move-left {
                 0% { transform: none; }
-                100% { transform: translateX(-697px); }
+                100% { transform: translateX(-520px); }
             }
         }
 
@@ -431,44 +514,51 @@ section {
             position: absolute;
 
             bottom: -20px;
-            left: -600px;
+            left: -520px;
 
             display: flex;
 
 
-            animation: move-left-bottom 5s linear infinite;
+            animation: move-right-bottom 5s linear infinite;
             @keyframes move-left-bottom {
                 0% { transform: rotate(180deg); }
                 100% { transform: rotate(180deg) translateX(695px); }
+            }
+
+            @keyframes move-right-bottom {
+                0% { transform: rotate(180deg); }
+                100% { transform: rotate(180deg) translateX(-520px); }
             }
         }
 
         .sharp {
             border-bottom-color: $yellow !important;
 
-            &:nth-child(n) {
-                @include drawTriangle(25px, 27px, 20px, 0);
-            }
+            @include drawTriangle(25px, 27px, 20px, 0);
 
-            &:nth-child(2n+2) {
-                @include drawTriangle(35px, 35px, 20px, 0);
-            }
-
-            &:nth-child(3n+3) {
-                @include drawTriangle(30px, 30px, 20px, 0);
-            }
-
-            &:nth-child(4n+4) {
-                @include drawTriangle(30px, 30px, 20px, 0);
-            }
-
-            &:nth-child(5n+5) {
-                @include drawTriangle(30px, 30px, 20px, 0);
-            }
-
-            &:nth-child(6n+6) {
-                @include drawTriangle(30px, 25px, 20px, 0);
-            }
+            // &:nth-child(n) {
+            //     @include drawTriangle(25px, 27px, 20px, 0);
+            // }
+            //
+            // &:nth-child(2n+2) {
+            //     @include drawTriangle(35px, 35px, 20px, 0);
+            // }
+            //
+            // &:nth-child(3n+3) {
+            //     @include drawTriangle(30px, 30px, 20px, 0);
+            // }
+            //
+            // &:nth-child(4n+4) {
+            //     @include drawTriangle(30px, 30px, 20px, 0);
+            // }
+            //
+            // &:nth-child(5n+5) {
+            //     @include drawTriangle(30px, 30px, 20px, 0);
+            // }
+            //
+            // &:nth-child(6n+6) {
+            //     @include drawTriangle(30px, 25px, 20px, 0);
+            // }
         }
     }
 }
@@ -476,7 +566,7 @@ section {
 .stages-screen {
     height: 400px;
     h2 {
-        font-size: 2em;
+        font-size: 2.5em;
         font-weight: 600;
     }
 
@@ -612,6 +702,9 @@ section {
     &:nth-child(even) {
         background: #FFF9E6;
     }
+
+    display: flex;
+    align-items: center;
 }
 
 .floor-nomination {
@@ -982,14 +1075,14 @@ section {
                     }
 
                     &:nth-child(10) {
-                        top: 270px;
-                        right: 10%;
+                        top: 160px;
+                        right: calc(10% - 45px);
 
-                        width: 60px;
-                        height: 60px;
+                        width: 40px;
+                        height: 40px;
 
                         animation: alley-popup 1s linear infinite;
-                        animation-delay: .11s;
+                        animation-delay: .15s;
 
                         @keyframes alley-popup {
                             0% { transform: scale(1); }
@@ -999,14 +1092,14 @@ section {
                     }
 
                     &:nth-child(11) {
-                        top: 335px;
-                        right: calc(10% + 10px);
+                        top: 210px;
+                        right: calc(10% - 30px);
 
-                        width: 80px;
-                        height: 70px;
+                        width: 50px;
+                        height: 50px;
 
                         animation: alley-popup 1s linear infinite;
-                        animation-delay: .13s;
+                        animation-delay: .16s;
 
                         @keyframes alley-popup {
                             0% { transform: scale(1); }
@@ -1016,6 +1109,39 @@ section {
                     }
 
                     &:nth-child(12) {
+                        top: 270px;
+                        right: calc(10% - 10px);
+
+                        width: 60px;
+                        height: 60px;
+
+                        animation: alley-popup 1s linear infinite;
+                        animation-delay: .17s;
+
+                        @keyframes alley-popup {
+                            0% { transform: scale(1); }
+                            50% { transform: scale(1.1); }
+                            100% { transform: scale(1); }
+                        }
+                    }
+
+                    &:nth-child(13) {
+                        top: 335px;
+                        right: calc(10% + 10px);
+
+                        width: 80px;
+                        height: 70px;
+
+                        animation: alley-popup 1s linear infinite;
+                        animation-delay: .18s;
+
+                        @keyframes alley-popup {
+                            0% { transform: scale(1); }
+                            50% { transform: scale(1.1); }
+                            100% { transform: scale(1); }
+                        }
+                    }
+                    &:nth-child(14) {
                         top: 400px;
                         right: calc(10% + 50px);
 
@@ -1023,7 +1149,7 @@ section {
                         height: 95px;
 
                         animation: alley-popup 1s linear infinite;
-                        animation-delay: .17s;
+                        animation-delay: .19s;
 
                         @keyframes alley-popup {
                             0% { transform: scale(1); }
@@ -1062,7 +1188,7 @@ section {
 .rules-screen {
     height: auto;
     h2 {
-        font-size: 1.5em;
+        font-size: 2.5em;
         font-weight: 500;
     }
 
@@ -1070,7 +1196,6 @@ section {
         margin-top: 50px;
         border: solid black;
         border-width: 2px 0 2px 0;
-        margin-left: 60px;
 
         .rules-screen__rules__rule {
             display: flex;
@@ -1078,6 +1203,8 @@ section {
 
             padding: 20px 0px;
             position: relative;
+
+            cursor: pointer;
 
             transition: all .5s;
             &:not(:last-child) {
@@ -1088,6 +1215,18 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                .screen__rules__rule__short__label {
+                    display: flex;
+                    align-items: center;
+
+                    .square {
+                        margin-right: 15px;
+                        width: 25px;
+                        height: 25px;
+                        background: $red;
+                    }
+                }
             }
 
             p {
@@ -1101,20 +1240,11 @@ section {
                 font-weight: bold;
             }
 
-            .square {
-                position: absolute;
-                left: -60px;
-                width: 25px;
-                height: 25px;
-                background: $red;
-            }
-
             .expand-button {
                 position: relative;
                 width: 20px;
                 height: 20px;
 
-                cursor: pointer;
                 &:before, &:after {
                     display: block;
                     content: "";
@@ -1163,11 +1293,12 @@ footer {
     background: $yellow;
     padding: 30px 10%;
 
-    color: white;
+    color: black;
 
     p {
         &:nth-child(4) {
-            font-weight: bold;
+            font-weight: bolder;
+            font-size: 1.3em;
         }
     }
 

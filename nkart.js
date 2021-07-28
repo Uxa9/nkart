@@ -8,13 +8,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-let ruleExpandButtons = Array.from(document.querySelectorAll('.expand-button'));
+let ruleExpandButtons = Array.from(document.querySelectorAll('.rules-screen__rules__rule'));
 
 ruleExpandButtons.forEach(button => {
     button.onclick = () => {
-        button.parentNode.parentNode.classList.contains('active') ?
-        button.parentNode.parentNode.classList.remove('active') :
-        button.parentNode.parentNode.classList.add('active');
+        button.classList.contains('active') ?
+        button.classList.remove('active') :
+        button.classList.add('active');
 
     }
 });
