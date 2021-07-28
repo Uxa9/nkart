@@ -118,9 +118,15 @@ nav {
 
 section {
   position: relative;
+  display: flex;
+  justify-content: center;
   height: 400px;
   min-height: 260px;
   padding: 100px 10%; }
+
+.section-wrapper {
+  position: relative;
+  max-width: 1200px; }
 
 .land-screen {
   display: flex;
@@ -128,9 +134,6 @@ section {
   justify-content: center;
   margin-bottom: 50px;
   height: calc(100% - 200px); }
-  .land-screen .land-screen-wrapper {
-    position: relative;
-    max-width: 1200px; }
   .land-screen .land-screen__content {
     display: flex;
     flex-flow: column nowrap;
@@ -244,8 +247,7 @@ section {
   .prize-screen .prize-screen__nominations {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
-    padding: 0px 10%; }
+    margin-top: 60px; }
     .prize-screen .prize-screen__nominations a {
       text-decoration: none;
       color: black; }
@@ -363,6 +365,7 @@ section {
       transform: rotate(0); }
 
 .stages-screen {
+  display: block;
   height: 400px; }
   .stages-screen h2 {
     font-size: 2.5em;
@@ -858,6 +861,7 @@ section {
         transform: rotate(0); }
 
 .rules-screen {
+  display: block;
   height: auto; }
   .rules-screen h2 {
     font-size: 2.5em;
