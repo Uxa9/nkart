@@ -38,31 +38,43 @@ body {
   flex-flow: row nowrap; }
 
 .button {
-  color: #333333;
+  color: #171219;
   text-decoration: none;
   position: relative; }
-  .button button, .button button:after {
+  .button:hover, .button:focus {
+    outline: none; }
+    .button:hover > div, .button:focus > div {
+      background: #171219;
+      border-color: #171219;
+      color: white;
+      outline: none; }
+      .button:hover > div .arrow, .button:focus > div .arrow {
+        transform: rotate(90deg); }
+        .button:hover > div .arrow:before, .button:hover > div .arrow:after, .button:focus > div .arrow:before, .button:focus > div .arrow:after {
+          filter: invert(100%);
+          -webkit-filter: invert(100%); }
+  .button > div, .button > div:after {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
-  .button button {
+  .button > div {
     cursor: pointer;
     width: 250px;
     height: 50px;
     font-size: 1em;
-    border: solid 2px #333333;
+    border: solid 2px #171219;
     background: none;
     display: flex;
     align-items: center;
     justify-content: center; }
-    .button button .arrow {
+    .button > div .arrow {
       width: 20px;
       height: 20px;
       position: relative;
       transition: all .5s;
       margin-right: 10px; }
-      .button button .arrow:before, .button button .arrow:after {
+      .button > div .arrow:before, .button > div .arrow:after {
         display: block;
         content: "";
         position: absolute;
@@ -70,35 +82,28 @@ body {
         width: 10px;
         height: 2px;
         background: black; }
-      .button button .arrow:before {
+      .button > div .arrow:before {
         top: 30%;
         left: 50%;
         transform: translate(-50%, 0%) rotate(45deg); }
-      .button button .arrow:after {
+      .button > div .arrow:after {
         bottom: 30%;
         left: 50%;
         transform: translate(-50%, 0%) rotate(-45deg); }
-    .button button:hover {
-      background: #333333;
-      border-color: #333333;
-      color: white; }
-      .button button:hover .arrow {
-        transform: rotate(90deg); }
-        .button button:hover .arrow:before, .button button:hover .arrow:after {
-          filter: invert(100%);
-          -webkit-filter: invert(100%); }
+    .button > div:hover, .button > div:focus {
+      outline: none; }
 
 .button-highlight {
   margin-right: 30px; }
-  .button-highlight button {
+  .button-highlight > div {
     background: #FF003D;
     color: white;
     border-color: #FF003D; }
-    .button-highlight button .arrow:before, .button-highlight button .arrow:after {
+    .button-highlight > div .arrow:before, .button-highlight > div .arrow:after {
       filter: invert(100%);
       -webkit-filter: invert(100%); }
-    .button-highlight button:hover .arrow {
-      transform: translateX(5px) scale(1.1); }
+  .button-highlight:hover > div .arrow, .button-highlight:focus > div .arrow {
+    transform: translateX(5px) scale(1.1); }
 
 nav {
   display: flex;
@@ -115,7 +120,7 @@ nav {
   z-index: 99999; }
   nav a {
     text-decoration: none;
-    color: #333333;
+    color: #171219;
     font-family: "ProximaNova-Semibold" !important;
     font-size: 18px; }
     nav a img {
@@ -263,9 +268,9 @@ section {
     margin-top: 60px; }
     .prize-screen .prize-screen__nominations a {
       text-decoration: none;
-      color: #333333; }
+      color: #171219;
+      transition: all .5s; }
       .prize-screen .prize-screen__nominations a:hover {
-        transition: all .5s;
         transform: scale(1.1); }
     .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination {
       position: relative; }
@@ -303,6 +308,8 @@ section {
               font-size: 1.5em;
               text-transform: uppercase; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .round {
+        position: absolute;
+        top: -25px;
         width: 240px;
         height: 240px;
         z-index: 0; }
@@ -314,6 +321,8 @@ section {
         .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p {
           width: 210px;
           top: 10%; }
+          .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p span:first-child {
+            word-spacing: -7px; }
           .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .figure p span:last-child {
             padding-right: 5px; }
       .prize-screen .prize-screen__nominations .prize-screen__nominations__nomination .triangle {
@@ -442,7 +451,7 @@ section {
       left: 0;
       width: 99%;
       height: 0px;
-      border-bottom: dashed 6px #333333; }
+      border-bottom: dashed 6px #171219; }
   .stages-screen .stages-screen__figures {
     display: flex;
     position: absolute;
@@ -532,6 +541,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
+    position: relative;
     z-index: 99;
     text-align: right; }
   .foodcourt-nomination .section-animation {
@@ -881,7 +891,7 @@ section {
     font-size: 3em; }
   .rules-screen .rules-screen__rules {
     margin-top: 50px;
-    border: solid #333333;
+    border: solid #171219;
     border-width: 2px 0 2px 0; }
     .rules-screen .rules-screen__rules .rules-screen__rules__rule {
       display: flex;
@@ -891,7 +901,7 @@ section {
       cursor: pointer;
       transition: all .5s; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule:not(:last-child) {
-        border-bottom: solid 2px #333333; }
+        border-bottom: solid 2px #171219; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule .rules-screen__rules__rule__short {
         display: flex;
         align-items: center;
@@ -924,7 +934,7 @@ section {
           left: 0%;
           width: 20px;
           height: 3px;
-          background: #333333;
+          background: #171219;
           border-radius: 10px; }
         .rules-screen .rules-screen__rules .rules-screen__rules__rule .expand-button:after {
           transform: rotate(-90deg); }
@@ -944,7 +954,7 @@ footer {
   position: relative;
   background: #FFC20E;
   padding: 30px 10%;
-  color: #333333; }
+  color: #171219; }
   footer .footer-info, footer .footer-contacts {
     display: flex;
     align-items: center; }
@@ -963,7 +973,8 @@ footer {
         margin-right: 20px; }
       footer .links a img {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        filter: invert(13%) sepia(96%) saturate(9%) hue-rotate(314deg) brightness(97%) contrast(86%); }
   footer .cat {
     position: absolute;
     top: 0;
@@ -1011,7 +1022,7 @@ footer {
         content: "";
         width: 3px;
         height: 3px;
-        background: #333333;
+        background: #171219;
         border-radius: 50%; }
     footer .cat .cat__nose {
       border-left: 6px solid transparent;
