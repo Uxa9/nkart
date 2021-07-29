@@ -22,7 +22,8 @@
   padding: 0;
   font-family: "ProximaNova-Regular", sans-serif;
   font-style: normal;
-  font-weight: normal; }
+  font-weight: normal;
+  color: #171219; }
 
 body {
   overflow: hidden; }
@@ -46,7 +47,7 @@ body {
     .button:hover > div, .button:focus > div {
       background: #171219;
       border-color: #171219;
-      color: white;
+      color: white !important;
       outline: none; }
       .button:hover > div .arrow, .button:focus > div .arrow {
         transform: rotate(90deg); }
@@ -92,13 +93,16 @@ body {
         transform: translate(-50%, 0%) rotate(-45deg); }
     .button > div:hover, .button > div:focus {
       outline: none; }
+      .button > div:hover span, .button > div:focus span {
+        color: white; }
 
 .button-highlight {
   margin-right: 30px; }
   .button-highlight > div {
     background: #FF003D;
-    color: white;
     border-color: #FF003D; }
+    .button-highlight > div span {
+      color: white !important; }
     .button-highlight > div .arrow:before, .button-highlight > div .arrow:after {
       filter: invert(100%);
       -webkit-filter: invert(100%); }
@@ -413,7 +417,7 @@ section {
       .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span {
         font-size: 2em;
         font-family: "ProximaNova-Semibold";
-        color: #CCCCCC; }
+        color: #ff0606; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(1) {
           padding-right: 2px; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(2) {
@@ -468,7 +472,7 @@ section {
     display: flex;
     position: absolute;
     bottom: -100px;
-    right: 5%; }
+    right: 0; }
     .stages-screen .stages-screen__figures .triangle {
       border-left: 40px solid transparent;
       border-right: 40px solid transparent;
@@ -487,7 +491,7 @@ section {
   .nomination-screen p {
     margin-top: 40px;
     margin-bottom: 100px;
-    width: 60%;
+    width: 550px;
     font-size: 1.2em; }
   .nomination-screen:nth-child(even) {
     background: #FFF9E6; }
@@ -506,7 +510,7 @@ section {
     .floor-nomination .section-animation .section-animation__top, .floor-nomination .section-animation .section-animation__bottom {
       display: flex;
       position: absolute;
-      right: 5%;
+      right: 0;
       z-index: 1; }
       .floor-nomination .section-animation .section-animation__top .triangle, .floor-nomination .section-animation .section-animation__bottom .triangle {
         border-left: 40px solid transparent;
@@ -524,7 +528,7 @@ section {
       display: flex;
       position: absolute;
       top: calc(50% - 300px);
-      right: 5%; }
+      right: 0; }
       .floor-nomination .section-animation .section-animation__content > div {
         display: flex;
         flex-flow: column nowrap; }
@@ -566,7 +570,7 @@ section {
       display: flex;
       position: absolute;
       top: -145px;
-      right: 5%;
+      right: 0;
       z-index: 999; }
       .foodcourt-nomination .section-animation .section-animation__top .triangle {
         border-left: 40px solid transparent;
@@ -908,17 +912,18 @@ section {
     font-size: 3em; }
   .rules-screen .rules-screen__rules {
     margin-top: 50px;
+    margin-bottom: 20px;
     border: solid #171219;
-    border-width: 2px 0 2px 0; }
+    border-width: 1px 0 1px 0; }
     .rules-screen .rules-screen__rules .rules-screen__rules__rule {
       display: flex;
       flex-flow: column;
-      padding: 20px 0px;
+      padding: 30px 0px;
       position: relative;
       cursor: pointer;
       transition: all .5s; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule:not(:last-child) {
-        border-bottom: solid 2px #171219; }
+        border-bottom: solid 1px #171219; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule .rules-screen__rules__rule__short {
         display: flex;
         align-items: center;
@@ -938,7 +943,8 @@ section {
         transition: all .2s;
         transform-origin: top; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule h4 {
-        font-size: 18px; }
+        font-size: 18px;
+        font-family: "ProximaNova-Semibold"; }
       .rules-screen .rules-screen__rules .rules-screen__rules__rule .expand-button {
         position: relative;
         width: 20px;
@@ -964,7 +970,6 @@ section {
         transform: scale(1.1) rotate(135deg); }
     .rules-screen .rules-screen__rules .active p {
       margin-top: 20px;
-      margin-bottom: 40px;
       height: auto;
       transform: scaleY(1); }
 

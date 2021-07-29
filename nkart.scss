@@ -51,6 +51,7 @@ $proximaSmb : "ProximaNova-Semibold";
     font-family: $proximaReg, sans-serif;
     font-style: normal;
     font-weight: normal;
+    color: $black;
 }
 body {
     overflow: hidden;
@@ -77,7 +78,7 @@ body {
         >div {
             background: $black;
             border-color: $black;
-            color: white;
+            color: white !important;
             outline: none;
             .arrow {
                 &:before, &:after {
@@ -144,6 +145,10 @@ body {
         }
         &:hover, &:focus {
             outline: none;
+
+            span {
+                color: white;
+            }
         }
     }
 }
@@ -153,8 +158,11 @@ body {
 
     >div {
         background: #FF003D;
-        color: white;
         border-color: #FF003D;
+
+        span {
+            color: white !important;
+        }
 
         .arrow {
             &:before, &:after {
@@ -638,7 +646,7 @@ section {
                 // font-weight: bold;
                 font-family: $proximaSmb;
 
-                color: #CCCCCC;
+                color: $red;
 
                 &:nth-child(1) {
                     padding-right: 2px;
@@ -729,7 +737,7 @@ section {
         display: flex;
         position: absolute;
         bottom: -100px;
-        right: 5%;
+        right: 0;
 
         .triangle {
             @include drawTriangle(40px, 40px, 70px, 0);
@@ -753,7 +761,7 @@ section {
     p {
         margin-top: 40px;
         margin-bottom: 100px;
-        width: 60%;
+        width: 550px;
         font-size: 1.2em;
 
         // font-weight: 600;
@@ -783,7 +791,7 @@ section {
         .section-animation__top, .section-animation__bottom {
             display: flex;
             position: absolute;
-            right: 5%;
+            right: 0;
 
             z-index: 1;
 
@@ -809,7 +817,7 @@ section {
             display: flex;
             position: absolute;
             top: calc(50% - 300px);
-            right: 5%;
+            right: 0;
             >div {
                 display: flex;
                 flex-flow: column nowrap;
@@ -866,7 +874,7 @@ section {
             display: flex;
             position: absolute;
             top: -145px;
-            right: 5%;
+            right: 0;
             z-index: 999;
 
             .triangle {
@@ -1263,20 +1271,21 @@ section {
 
     .rules-screen__rules {
         margin-top: 50px;
+        margin-bottom: 20px;
         border: solid $black;
-        border-width: 2px 0 2px 0;
+        border-width: 1px 0 1px 0;
 
         .rules-screen__rules__rule {
             display: flex;
             flex-flow: column;
 
-            padding: 20px 0px;
+            padding: 30px 0px;
             position: relative;
 
             cursor: pointer;
             transition: all .5s;
             &:not(:last-child) {
-                border-bottom: solid 2px $black;
+                border-bottom: solid 1px $black;
             }
 
             .rules-screen__rules__rule__short {
@@ -1309,6 +1318,7 @@ section {
 
             h4 {
                 font-size: 18px;
+                font-family: $proximaSmb;
             }
 
             .expand-button {
@@ -1350,7 +1360,6 @@ section {
 
             p {
                 margin-top: 20px;
-                margin-bottom: 40px;
                 height: auto;
                 transform: scaleY(1);
             }
