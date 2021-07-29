@@ -640,7 +640,9 @@ section {
             margin-top: 130px;
             span {
                 text-align: center;
-                font-weight: bold;
+
+                font-family: $proximaSmb;
+                // font-weight: bold;
 
                 &:nth-child(1) {
                     padding-left: 20px;
@@ -658,7 +660,7 @@ section {
 
             .square {
                 width: 40px;
-                height: 150px;
+                height: 140px;
             }
 
             .round {
@@ -666,7 +668,7 @@ section {
                 width: 50px;
                 height: 50px;
 
-                margin-top: 10px;
+                // margin-top: 10px;
 
                 &:before {
                     display: block;
@@ -677,7 +679,7 @@ section {
                     background: #CCCCCC;
 
                     position: absolute;
-                    top: -72px;
+                    top: -62px;
                     left: 50%;
 
                     transform: translate(100% 0);
@@ -691,7 +693,7 @@ section {
                 position: absolute;
 
                 z-index: -1;
-                top: 30px;
+                top: 20px;
                 left: 0;
 
                 width: 99%;
