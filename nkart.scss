@@ -399,11 +399,12 @@ section {
             }
 
             &:nth-child(2) {
-                margin: 0 5px;
+                margin: 0 20px;
                 font-size: 6em;
-                line-height: 80%;
+                line-height: 70%;
                 // font-weight: bold;
                 color: $red;
+                word-spacing: -15px;
             }
 
             &:last-child {
@@ -1013,8 +1014,9 @@ section {
         z-index: -1;
         height: 100%;
         width: 100%;
-        right: 0;
-        top: 0;
+        right: 150px;
+        top: -60px;
+        transform: scale(1.3);
         .section-animation__content {
             .sun {
                 position: absolute;
