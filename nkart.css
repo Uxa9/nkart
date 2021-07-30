@@ -858,7 +858,7 @@ section {
       .street-nomination .section-animation .section-animation__content .alley .round:nth-child(13) {
         top: 335px;
         right: 10px;
-        width: 80px;
+        width: 70px;
         height: 70px;
         animation: alley-popup 1s linear infinite;
         animation-delay: .18s; }
