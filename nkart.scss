@@ -156,6 +156,13 @@ body {
 .button-highlight {
     margin-right: 30px;
 
+    &:hover,&:focus {
+        >div {
+            background: #c21313;
+            border-color: #c21313;
+        }
+    }
+
     >div {
         background: #FF003D;
         border-color: #FF003D;
@@ -383,7 +390,7 @@ section {
 }
 
 .prize-screen {
-    height: 650px;
+    height: 600px;
     padding: 0;
     background: $yellow;
     h2 {
@@ -1395,7 +1402,7 @@ footer {
             font-size: 1.3em;
             font-family: $proximaSmb;
             // font-weight: bold;
-            margin-right: 20px;
+            margin-right: 40px;
         }
     }
 
@@ -1408,6 +1415,8 @@ footer {
 
             &:first-child {
                 margin-right: 20px;
+                width: 32px;
+                height: 32px;
             }
 
             img {
