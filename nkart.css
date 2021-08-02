@@ -445,7 +445,16 @@ section {
       justify-content: space-between; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square {
         width: 40px;
-        height: 140px; }
+        height: 140px;
+        position: relative; }
+        .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square .crown {
+          position: absolute;
+          top: -30px;
+          left: -5px;
+          width: 30px;
+          height: 30px; }
+          .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square .crown img {
+            color: #FFC20E; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round {
         position: relative;
         width: 50px;
@@ -572,7 +581,7 @@ section {
     .foodcourt-nomination .section-animation .section-animation__top {
       display: flex;
       position: absolute;
-      top: -145px;
+      top: -146px;
       right: 0;
       z-index: 999; }
       .foodcourt-nomination .section-animation .section-animation__top .triangle {

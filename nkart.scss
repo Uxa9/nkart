@@ -698,6 +698,20 @@ section {
             .square {
                 width: 40px;
                 height: 140px;
+                position: relative;
+
+                .crown {
+                    position: absolute;
+
+                    top: -30px;
+                    left: -5px;
+                    width: 30px;
+                    height: 30px;
+                    img {
+                        color: $yellow;
+
+                    }
+                }
             }
 
             .round {
@@ -880,7 +894,7 @@ section {
         .section-animation__top {
             display: flex;
             position: absolute;
-            top: -145px;
+            top: -146px;
             right: 0;
             z-index: 999;
 
