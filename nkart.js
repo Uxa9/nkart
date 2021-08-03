@@ -15,6 +15,30 @@ ruleExpandButtons.forEach(button => {
         button.classList.contains('active') ?
         button.classList.remove('active') :
         button.classList.add('active');
-
     }
+});
+
+let burgerMenu = document.querySelector('.burger-menu');
+let navLinks = document.querySelector('.navigation__links');
+
+let mobileMenuShowUp = () => {
+    burgerMenu.classList.add('active');
+    navLinks.classList.add('mobile-menu');
+}
+
+let mobileMenuShowDown = () => {
+    burgerMenu.classList.remove('active');
+    navLinks.classList.remove('mobile-menu');
+}
+
+burgerMenu.onclick = () => {
+    burgerMenu.classList.contains('active') ?
+    mobileMenuShowDown() :
+    mobileMenuShowUp();
+}
+
+let menuLinks = Array.from(navLinks.querySelectorAll('a'));
+
+menuLinks.forEach(link => {
+    link.onclick = () => mobileMenuShowDown();
 });
