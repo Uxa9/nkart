@@ -80,6 +80,9 @@ body {
             border-color: $black;
             color: white !important;
             outline: none;
+            span {
+                color: white;
+            }
             .arrow {
                 &:before, &:after {
                     filter: invert(100%);
@@ -141,13 +144,6 @@ body {
                 left: 50%;
 
                 transform: translate(-50%, 0%) rotate(-45deg);
-            }
-        }
-        &:hover, &:focus {
-            outline: none;
-
-            span {
-                color: white;
             }
         }
     }
@@ -703,10 +699,11 @@ section {
                 .crown {
                     position: absolute;
 
-                    top: -30px;
-                    left: -5px;
+                    top: -32px;
+                    left: -6px;
                     width: 30px;
                     height: 30px;
+                    transform: scale(1.1);
                     img {
                         color: $yellow;
 

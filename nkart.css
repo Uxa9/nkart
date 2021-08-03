@@ -49,6 +49,8 @@ body {
       border-color: #171219;
       color: white !important;
       outline: none; }
+      .button:hover > div span, .button:focus > div span {
+        color: white; }
       .button:hover > div .arrow, .button:focus > div .arrow {
         transform: rotate(90deg); }
         .button:hover > div .arrow:before, .button:hover > div .arrow:after, .button:focus > div .arrow:before, .button:focus > div .arrow:after {
@@ -91,10 +93,6 @@ body {
         bottom: 30%;
         left: 50%;
         transform: translate(-50%, 0%) rotate(-45deg); }
-    .button > div:hover, .button > div:focus {
-      outline: none; }
-      .button > div:hover span, .button > div:focus span {
-        color: white; }
 
 .button-highlight {
   margin-right: 30px; }
@@ -449,10 +447,11 @@ section {
         position: relative; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square .crown {
           position: absolute;
-          top: -30px;
-          left: -5px;
+          top: -32px;
+          left: -6px;
           width: 30px;
-          height: 30px; }
+          height: 30px;
+          transform: scale(1.1); }
           .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square .crown img {
             color: #FFC20E; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round {
