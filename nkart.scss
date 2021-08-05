@@ -1888,11 +1888,11 @@ footer {
 
         .footer-info {
             flex-flow: column nowrap;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             span {
                 font-family: $proximaSmb;
                 margin: 0;
-                margin-top: 20px;
+                margin-top: 25px;
 
                 text-align: center;
             }
@@ -1900,7 +1900,7 @@ footer {
 
         .footer-contacts {
             .links {
-                margin-top: 20px;
+                margin-top: 25px;
                 transform: scale(1.3);
                 width: 100px;
                 justify-content: space-around;
