@@ -55,6 +55,9 @@ $proximaSmb : "ProximaNova-Semibold";
 }
 body {
     overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 .wrapper {
     width: 100%;
