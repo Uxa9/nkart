@@ -1418,11 +1418,11 @@ footer {
   .street-nomination .section-animation {
     transform: scale(0.6) !important;
     right: -20px !important;
-    right: -70px !important;
+    right: -80px !important;
     top: -40px !important; }
     .street-nomination .section-animation .sun {
       top: -130px !important;
-      right: 370px !important; }
+      right: 380px !important; }
   .rules-screen h4 {
     width: 200px; } }
 
