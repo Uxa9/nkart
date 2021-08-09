@@ -1831,7 +1831,9 @@ footer {
     }
 
     .rules-screen {
-        font-size: 2em;
+        h2 {
+            font-size: 7vw;
+        }
     }
 
     footer {
@@ -2110,9 +2112,9 @@ footer {
                 .pizza {
                     // opacity: 0.5;
                     // filter: blur(1px);
-                    top: -10px;
-                    left: -145px;
-                    transform: scale(0.75) rotate(193deg);
+                    top: -40px;
+                    left: -168px;
+                    transform: scale(0.6) rotate(193deg);
                 }
             }
         }
@@ -2122,16 +2124,16 @@ footer {
         .section-animation {
             // opacity: 0.5;
             // filter: blur(1px);
-            transform: scale(0.9) !important;
+            transform: scale(0.6) !important;
             right: -20px !important;
 
             .sun {
-                top: -40px !important;
-                right: 260px !important;
+                top: -130px !important;
+                right: 370px !important;
             }
 
-            right: -40px !important;
-            top: -30px !important;
+            right: -70px !important;
+            top: -40px !important;
         }
     }
 
