@@ -1887,9 +1887,14 @@ footer {
 
 @media screen and (max-width: 540px) {
     footer {
+        margin-top: 40px;
         padding: 50px 5%;
         .section-wrapper {
             flex-flow: column nowrap;
+        }
+
+        .cat {
+            top: -50px;
         }
 
         .footer-info {

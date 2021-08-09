@@ -1272,9 +1272,12 @@ footer {
 
 @media screen and (max-width: 540px) {
   footer {
+    margin-top: 40px;
     padding: 50px 5%; }
     footer .section-wrapper {
       flex-flow: column nowrap; }
+    footer .cat {
+      top: -50px; }
     footer .footer-info {
       flex-flow: column nowrap;
       margin-bottom: 25px; }
