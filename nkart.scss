@@ -1776,10 +1776,10 @@ footer {
 
                 span {
                     padding: 0 !important;
-                    width: 40vw;
+                    width: 35vw;
                     margin: 0 2vw;
                     text-align: center;
-
+                    font-size: 1em;
                 }
                 br {
                     display: none;
@@ -1793,8 +1793,8 @@ footer {
                 height: 100%;
 
                 .square {
-                    width: 60%;
-                    height: 70px;
+                    width: 55%;
+                    height: 60px;
 
                     .crown {
                         transform: scale(1.5);
@@ -1804,22 +1804,22 @@ footer {
                 }
 
                 .round {
-                    width: 70px;
-                    height: 70px;
-                    right: 40%;
+                    width: 60px;
+                    height: 60px;
+                    right: 35%;
 
                     &:before {
-                        width: 170px;
+                        width: 50vw;
                         height: 2px;
 
-                        top: 65%;
+                        top: 50%;
                     }
                 }
 
                 &:before {
                     border-bottom: none;
                     position: absolute;
-                    left: calc(60vw - 38px);
+                    left: calc(65vw - 33px);
 
                     width: 0px;
                     height: 100%;
@@ -1828,6 +1828,10 @@ footer {
                 }
             }
         }
+    }
+
+    .rules-screen {
+        font-size: 2em;
     }
 
     footer {

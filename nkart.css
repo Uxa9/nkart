@@ -1215,9 +1215,10 @@ footer {
         height: 65%; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__stage span {
           padding: 0 !important;
-          width: 40vw;
+          width: 35vw;
           margin: 0 2vw;
-          text-align: center; }
+          text-align: center;
+          font-size: 1em; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__stage br {
           display: none; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes {
@@ -1225,27 +1226,29 @@ footer {
         align-items: flex-end;
         height: 100%; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square {
-          width: 60%;
-          height: 70px; }
+          width: 55%;
+          height: 60px; }
           .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square .crown {
             transform: scale(1.5);
             left: -4px;
             top: -34px; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round {
-          width: 70px;
-          height: 70px;
-          right: 40%; }
+          width: 60px;
+          height: 60px;
+          right: 35%; }
           .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round:before {
-            width: 170px;
+            width: 50vw;
             height: 2px;
-            top: 65%; }
+            top: 50%; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes:before {
           border-bottom: none;
           position: absolute;
-          left: calc(60vw - 38px);
+          left: calc(65vw - 33px);
           width: 0px;
           height: 100%;
           border-left: dashed 6px #171219; }
+  .rules-screen {
+    font-size: 2em; }
   footer .footer-info span {
     width: 200px; }
   footer .footer-contacts {
