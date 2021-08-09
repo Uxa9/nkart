@@ -1749,7 +1749,7 @@ footer {
             flex-flow: column;
             justify-content: center;
             height: 650px;
-            width: 300px;
+            width: 100vw;
             >div {
                 margin: 0 !important;
             }
@@ -1757,34 +1757,28 @@ footer {
             .stages-screen__timeline__dates {
                 flex-flow: column nowrap;
                 position: absolute;
-                left: 80px;
+                left: 30px;
                 height: 100%;
                 font-size: 1em;
                 span {
                     padding: 0 !important;
-                    color: $black;
-
-                    &:nth-child(1), &:nth-child(4) {
-                        height: 70px;
-                    }
-
-                    &:nth-child(2), &:nth-child(3) {
-                        height: 65px;
-                        line-height: 50px;
-                    }
+                    font-size: 2.5em;
+                    line-height: 70px;
+                    text-align: center;
                 }
             }
 
             .stages-screen__timeline__stage {
                 flex-flow: column nowrap;
                 justify-content: space-between;
+                align-items: flex-end;
                 height: 65%;
 
                 span {
                     padding: 0 !important;
-                    width: 200px;
-                    margin-left: 100px;
-                    text-align: left;
+                    width: 40vw;
+                    margin: 0 2vw;
+                    text-align: center;
 
                 }
                 br {
@@ -1795,10 +1789,11 @@ footer {
             .stages-screen__timeline__shapes {
                 // position: absolute;
                 flex-flow: column nowrap;
+                align-items: flex-end;
                 height: 100%;
 
                 .square {
-                    width: 70px;
+                    width: 60%;
                     height: 70px;
 
                     .crown {
@@ -1809,9 +1804,9 @@ footer {
                 }
 
                 .round {
-                    width: 60px;
-                    height: 60px;
-                    left: 5px;
+                    width: 70px;
+                    height: 70px;
+                    right: 40%;
 
                     &:before {
                         width: 170px;
@@ -1824,7 +1819,7 @@ footer {
                 &:before {
                     border-bottom: none;
                     position: absolute;
-                    left: 32px;
+                    left: calc(60vw - 38px);
 
                     width: 0px;
                     height: 100%;
@@ -2022,7 +2017,7 @@ footer {
 
         .section-animation {
             // opacity: 0.7;
-            filter: blur(1px);
+            // filter: blur(1px);
             height: 100%;
             width: 100vw;
             left: -10vw;
@@ -2032,7 +2027,7 @@ footer {
 
                 top: unset;
                 left: -5px;
-                bottom: 200px;
+                bottom: 185px;
                 transform: none;
 
                 .triangle {
@@ -2049,7 +2044,7 @@ footer {
 
                 top: unset;
                 right: -12.5%;
-                bottom: 200px;
+                bottom: 185px;
                 transform: none;
 
                 .triangle {
@@ -2065,7 +2060,7 @@ footer {
                 flex-flow: column nowrap;
                 top: unset;
                 right: unset;
-                bottom: 200px;
+                bottom: 185px;
                 left: 5px;
                 >div {
                     flex-flow: row nowrap;
@@ -2110,10 +2105,10 @@ footer {
             .section-animation__content {
                 .pizza {
                     // opacity: 0.5;
-                    filter: blur(1px);
-                    top: 60px;
-                    left: -135px;
-                    transform: scale(0.85) rotate(193deg);
+                    // filter: blur(1px);
+                    top: -10px;
+                    left: -145px;
+                    transform: scale(0.75) rotate(193deg);
                 }
             }
         }
@@ -2122,11 +2117,17 @@ footer {
     .street-nomination {
         .section-animation {
             // opacity: 0.5;
-            filter: blur(1px);
-            transform: scale(0.9);
+            // filter: blur(1px);
+            transform: scale(0.9) !important;
+            right: -20px !important;
 
-            right: -40px;
-            top: 30px;
+            .sun {
+                top: -40px !important;
+                right: 260px !important;
+            }
+
+            right: -40px !important;
+            top: -30px !important;
         }
     }
 

@@ -1194,48 +1194,47 @@ footer {
       flex-flow: column;
       justify-content: center;
       height: 650px;
-      width: 300px; }
+      width: 100vw; }
       .stages-screen .stages-screen__timeline > div {
         margin: 0 !important; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__dates {
         flex-flow: column nowrap;
         position: absolute;
-        left: 80px;
+        left: 30px;
         height: 100%;
         font-size: 1em; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span {
           padding: 0 !important;
-          color: #171219; }
-          .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(1), .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(4) {
-            height: 70px; }
-          .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(2), .stages-screen .stages-screen__timeline .stages-screen__timeline__dates span:nth-child(3) {
-            height: 65px;
-            line-height: 50px; }
+          font-size: 2.5em;
+          line-height: 70px;
+          text-align: center; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__stage {
         flex-flow: column nowrap;
         justify-content: space-between;
+        align-items: flex-end;
         height: 65%; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__stage span {
           padding: 0 !important;
-          width: 200px;
-          margin-left: 100px;
-          text-align: left; }
+          width: 40vw;
+          margin: 0 2vw;
+          text-align: center; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__stage br {
           display: none; }
       .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes {
         flex-flow: column nowrap;
+        align-items: flex-end;
         height: 100%; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square {
-          width: 70px;
+          width: 60%;
           height: 70px; }
           .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square .crown {
             transform: scale(1.5);
             left: -4px;
             top: -34px; }
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round {
-          width: 60px;
-          height: 60px;
-          left: 5px; }
+          width: 70px;
+          height: 70px;
+          right: 40%; }
           .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round:before {
             width: 170px;
             height: 2px;
@@ -1243,7 +1242,7 @@ footer {
         .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes:before {
           border-bottom: none;
           position: absolute;
-          left: 32px;
+          left: calc(60vw - 38px);
           width: 0px;
           height: 100%;
           border-left: dashed 6px #171219; }
@@ -1350,7 +1349,6 @@ footer {
     .floor-nomination .nomination-screen__text p {
       width: 100%; }
     .floor-nomination .section-animation {
-      filter: blur(1px);
       height: 100%;
       width: 100vw;
       left: -10vw; }
@@ -1358,7 +1356,7 @@ footer {
         flex-flow: column nowrap;
         top: unset;
         left: -5px;
-        bottom: 200px;
+        bottom: 185px;
         transform: none; }
         .floor-nomination .section-animation .section-animation__top .triangle {
           border-left: 30px solid transparent;
@@ -1371,7 +1369,7 @@ footer {
         flex-flow: column nowrap;
         top: unset;
         right: -12.5%;
-        bottom: 200px;
+        bottom: 185px;
         transform: none; }
         .floor-nomination .section-animation .section-animation__bottom .triangle {
           border-left: 30px solid transparent;
@@ -1384,7 +1382,7 @@ footer {
         flex-flow: column nowrap;
         top: unset;
         right: unset;
-        bottom: 200px;
+        bottom: 185px;
         left: 5px; }
         .floor-nomination .section-animation .section-animation__content > div {
           flex-flow: row nowrap; }
@@ -1411,15 +1409,17 @@ footer {
   .foodcourt-nomination .section-animation .section-animation__top {
     display: none; }
   .foodcourt-nomination .section-animation .section-animation__content .pizza {
-    filter: blur(1px);
-    top: 60px;
-    left: -135px;
-    transform: scale(0.85) rotate(193deg); }
+    top: -10px;
+    left: -145px;
+    transform: scale(0.75) rotate(193deg); }
   .street-nomination .section-animation {
-    filter: blur(1px);
-    transform: scale(0.9);
-    right: -40px;
-    top: 30px; }
+    transform: scale(0.9) !important;
+    right: -20px !important;
+    right: -40px !important;
+    top: -30px !important; }
+    .street-nomination .section-animation .sun {
+      top: -40px !important;
+      right: 260px !important; }
   .rules-screen h4 {
     width: 200px; } }
 
