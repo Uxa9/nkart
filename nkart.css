@@ -34,7 +34,6 @@ body {
 .wrapper {
   width: 100%;
   height: calc(100vh - 60px);
-  height: calc(var(--vh, 1vh) * 100 - 60px);
   overflow-y: scroll;
   overflow-x: hidden; }
 
@@ -1271,6 +1270,8 @@ footer {
       order: 0; } }
 
 @media screen and (max-width: 540px) {
+  .wrapper {
+    height: calc(var(--vh, 1vh) * 100 - 60px); }
   footer {
     margin-top: 40px;
     padding: 50px 5%; }
