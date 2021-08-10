@@ -1413,12 +1413,12 @@ footer {
     display: none; }
   .foodcourt-nomination .section-animation .section-animation__content .pizza {
     top: -40px;
-    left: -168px;
+    left: -180px;
     transform: scale(0.6) rotate(193deg); }
   .street-nomination .section-animation {
     transform: scale(0.6) !important;
     right: -20px !important;
-    right: -80px !important;
+    right: -90px !important;
     top: -40px !important; }
     .street-nomination .section-animation .sun {
       top: -130px !important;
