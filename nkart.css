@@ -1302,7 +1302,7 @@ footer {
     padding: 50px 10%;
     height: auto; }
     section h2 {
-      font-size: 7vw !important; }
+      font-size: 9vw !important; }
   .buttons {
     width: 100%;
     align-items: center; }
@@ -1341,11 +1341,16 @@ footer {
         margin-top: 250px; }
     .land-screen .land-screen__figures {
       right: 50%;
-      transform: translate(60%, -65%) scale(0.75); }
+      transform: translate(60%, -70%) scale(0.75); }
+      .land-screen .land-screen__figures .triangle {
+        border-bottom: 220px solid #ff0606; }
   .prize-screen h2 span:first-child {
-    font-size: 7vw !important; }
+    font-size: 9vw !important; }
     .prize-screen h2 span:first-child br {
       display: none; }
+  .prize-screen h2 span:nth-child(2) {
+    margin-top: 10px;
+    line-height: 80% !important; }
   .prize-screen h2 span:last-child {
     font-size: 6vw !important;
     width: 100%;
@@ -1353,6 +1358,15 @@ footer {
     padding-right: calc(10% + 30px); }
   .stages-screen .stages-screen__timeline {
     height: 80vh; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .square {
+      width: 62%; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes .round {
+      right: 43%; }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__shapes:before {
+      left: calc(58vw - 36px); }
+    .stages-screen .stages-screen__timeline .stages-screen__timeline__stage span {
+      width: 40vw;
+      margin: 0 4vw; }
   .stages-screen .stages-screen__figures {
     display: none; }
   .nomination-screen .nomination-screen__text {
@@ -1360,7 +1374,8 @@ footer {
     flex-flow: column nowrap;
     align-items: center; }
     .nomination-screen .nomination-screen__text h2 {
-      text-align: center; }
+      text-align: center;
+      font-size: 7vw !important; }
     .nomination-screen .nomination-screen__text p {
       font-family: "ProximaNova-Semibold"; }
   .floor-nomination {
@@ -1441,6 +1456,8 @@ footer {
     .street-nomination .section-animation .sun {
       top: -130px !important;
       right: 380px !important; }
+  .rules-screen h2 {
+    font-size: 7vw !important; }
   .rules-screen h4 {
     width: 200px; } }
 

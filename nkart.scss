@@ -1933,7 +1933,7 @@ footer {
         height: auto;
 
         h2 {
-            font-size: 7vw !important;
+            font-size: 9vw !important;
         }
     }
 
@@ -1995,8 +1995,12 @@ footer {
         }
 
         .land-screen__figures {
+
+            .triangle {
+                border-bottom: 220px solid $red;
+            }
             right: 50%;
-            transform: translate(60%, -65%) scale(0.75);
+            transform: translate(60%, -70%) scale(0.75);
         }
     }
 
@@ -2007,7 +2011,12 @@ footer {
                     br {
                         display: none;
                     }
-                    font-size: 7vw !important;
+                    font-size: 9vw !important;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 10px;
+                    line-height: 80% !important;
                 }
 
                 &:last-child {
@@ -2023,6 +2032,27 @@ footer {
     .stages-screen {
         .stages-screen__timeline {
             height: 80vh;
+
+            .stages-screen__timeline__shapes {
+                .square {
+                    width: 62%;
+                }
+
+                .round {
+                    right: 43%;
+                }
+
+                &:before {
+                    left: calc(58vw - 36px);
+                }
+            }
+
+            .stages-screen__timeline__stage {
+                span {
+                    width: 40vw;
+                    margin: 0 4vw;
+                }
+            }
         }
         .stages-screen__figures {
             display: none;
@@ -2037,6 +2067,7 @@ footer {
 
             h2 {
                 text-align: center;
+                font-size: 7vw !important;
             }
 
             p {
@@ -2174,6 +2205,9 @@ footer {
     }
 
     .rules-screen {
+        h2 {
+            font-size: 7vw !important;
+        }
         h4 {
             width: 200px;
         }
