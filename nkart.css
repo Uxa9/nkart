@@ -1301,6 +1301,8 @@ footer {
   section {
     padding: 50px 10%;
     height: auto; }
+    section h2 {
+      font-size: 7vw !important; }
   .buttons {
     width: 100%;
     align-items: center; }
@@ -1331,12 +1333,26 @@ footer {
           font-size: 5.2vw; }
           .land-screen .land-screen__content .land-screen__text h1 p:nth-child(2) {
             min-width: 0;
-            width: 100%; }
+            width: 100%;
+            font-family: "ProximaNova-Semibold"; }
+            .land-screen .land-screen__content .land-screen__text h1 p:nth-child(2) span {
+              font-family: "ProximaNova-Semibold"; }
       .land-screen .land-screen__content .buttons {
         margin-top: 250px; }
     .land-screen .land-screen__figures {
       right: 50%;
       transform: translate(60%, -65%) scale(0.75); }
+  .prize-screen h2 span:first-child {
+    font-size: 7vw !important; }
+    .prize-screen h2 span:first-child br {
+      display: none; }
+  .prize-screen h2 span:last-child {
+    font-size: 6vw !important;
+    width: 100%;
+    text-align: right !important;
+    padding-right: calc(10% + 30px); }
+  .stages-screen .stages-screen__timeline {
+    height: 80vh; }
   .stages-screen .stages-screen__figures {
     display: none; }
   .nomination-screen .nomination-screen__text {
@@ -1345,6 +1361,8 @@ footer {
     align-items: center; }
     .nomination-screen .nomination-screen__text h2 {
       text-align: center; }
+    .nomination-screen .nomination-screen__text p {
+      font-family: "ProximaNova-Semibold"; }
   .floor-nomination {
     overflow-x: hidden; }
     .floor-nomination .nomination-screen__text .buttons {

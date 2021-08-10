@@ -1931,6 +1931,10 @@ footer {
     section {
         padding: 50px 10%;
         height: auto;
+
+        h2 {
+            font-size: 7vw !important;
+        }
     }
 
     .buttons {
@@ -1976,6 +1980,11 @@ footer {
                     p:nth-child(2) {
                         min-width: 0;
                         width: 100%;
+                        font-family: $proximaSmb;
+
+                        span {
+                            font-family: $proximaSmb;
+                        }
                     }
                 }
             }
@@ -1991,7 +2000,30 @@ footer {
         }
     }
 
+    .prize-screen {
+        h2 {
+            span {
+                &:first-child {
+                    br {
+                        display: none;
+                    }
+                    font-size: 7vw !important;
+                }
+
+                &:last-child {
+                    font-size: 6vw !important;
+                    width: 100%;
+                    text-align: right !important;
+                    padding-right: calc(10% + 30px);
+                }
+            }
+        }
+    }
+
     .stages-screen {
+        .stages-screen__timeline {
+            height: 80vh;
+        }
         .stages-screen__figures {
             display: none;
         }
@@ -2005,6 +2037,10 @@ footer {
 
             h2 {
                 text-align: center;
+            }
+
+            p {
+                font-family: $proximaSmb;
             }
         }
     }
