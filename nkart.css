@@ -1341,9 +1341,9 @@ footer {
         margin-top: 250px; }
     .land-screen .land-screen__figures {
       right: 50%;
-      transform: translate(60%, -70%) scale(0.75); }
+      transform: translate(60%, -70%) scale(0.7); }
       .land-screen .land-screen__figures .triangle {
-        border-bottom: 220px solid #ff0606; }
+        top: 13%; }
   .prize-screen h2 span:first-child {
     font-size: 9vw !important; }
     .prize-screen h2 span:first-child br {
